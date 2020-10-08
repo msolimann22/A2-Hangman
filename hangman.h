@@ -3,6 +3,7 @@
 #include <QMainWindow>
 #include <QObject>
 #include <QKeyEvent>
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Hangman; }
@@ -17,6 +18,7 @@ public:
 
 private:
     Ui::Hangman *ui;
+    const QString guessWord = "ICECREAM"; //must be capitalized, this is the word that the user guesses
 
 private slots:
     void keyPressEvent(QKeyEvent *event);

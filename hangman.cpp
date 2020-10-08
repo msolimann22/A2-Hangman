@@ -15,6 +15,21 @@ Hangman::~Hangman()
 
 void Hangman::keyPressEvent(QKeyEvent *event)
 {
-    ui->TextBox->setText(QString::number(event->key()));
+
+    int flag = 0;
+
+    for(int i=0; i<guessWord.length() ; i++){
+        if(event->key() == guessWord.at(i) ){
+            ui->TextBox->setText("guessed correctly");
+            flag = 1;
+        }
+    }
+
+    if(flag==0){
+        ui->TextBox->setText("guessed incorrectly");
+    }
+
+
+
 }
 
