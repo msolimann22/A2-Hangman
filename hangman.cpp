@@ -23,12 +23,12 @@ Hangman::Hangman(QWidget *parent): QMainWindow(parent), ui(new Ui::Hangman)
 
               ui ->graphicsView->setRenderHint(QPainter::Antialiasing);
 
-            /* line1->setRotation(45);
-             line2->setRotation(45);
-             line3->setRotation(45);
-             line4->setRotation(45);
-             line5->setRotation(45);
-             */
+             line[0]->setRotation(45);
+             line[1]->setRotation(45);
+             line[2]->setRotation(45);
+             line[3]->setRotation(45);
+             line[4]->setRotation(45);
+
 
 
 

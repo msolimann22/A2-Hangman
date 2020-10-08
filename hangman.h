@@ -8,7 +8,7 @@
 #include <QGraphicsLineItem>
 #include <QGraphicsEllipseItem>
 #include <QPainter>
-#include<QGraphicsItemAnimation>
+#include <QGraphicsItemAnimation>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Hangman; }
