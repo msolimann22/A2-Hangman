@@ -4,6 +4,10 @@
 #include <QObject>
 #include <QKeyEvent>
 #include <QString>
+#include <QGraphicsScene>
+#include <QGraphicsLineItem>
+#include <QGraphicsEllipseItem>
+#include <QPainter>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Hangman; }
@@ -21,6 +25,10 @@ private:
     const QString guessWord = "ICECREAM"; //must be capitalized, this is the word that the user guesses
     char guessedChar[30];
     int back; //points to the last char in the array
+    QGraphicsScene* scene;
+       QGraphicsItem* line1, *line2, *line3, *line4, *line5;
+       QGraphicsItem* ellipse;
+
 private slots:
     void keyPressEvent(QKeyEvent *event);
 
