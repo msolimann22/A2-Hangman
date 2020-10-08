@@ -19,7 +19,8 @@ public:
 private:
     Ui::Hangman *ui;
     const QString guessWord = "ICECREAM"; //must be capitalized, this is the word that the user guesses
-
+    char guessedChar[30];
+    int back; //points to the last char in the array
 private slots:
     void keyPressEvent(QKeyEvent *event);
 
