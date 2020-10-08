@@ -15,11 +15,11 @@ Hangman::Hangman(QWidget *parent): QMainWindow(parent), ui(new Ui::Hangman)
 
              scene ->setSceneRect(-200,-200,300,300);
              ellipse = scene -> addEllipse(-150,-150,200,200,BluePen,BlueBrush);
-              line1= scene->addLine(0,0,100,100, BluePen); //Line 1
-              line2= scene->addLine(0,0,100,100, BluePen); //Line 2
-              line3= scene->addLine(0,0,100,100, BluePen); //Line 3
-              line4= scene->addLine(0,0,100,100, BluePen); //Line 4
-              line5= scene->addLine(0,0,100,100, BluePen); //Line 5
+              line[0]= scene->addLine(0,0,100,100, BluePen); //Line 1
+              line[1]= scene->addLine(0,0,100,100, BluePen); //Line 2
+              line[2]= scene->addLine(0,0,100,100, BluePen); //Line 3
+              line[3]= scene->addLine(0,0,100,100, BluePen); //Line 4
+              line[4]= scene->addLine(0,0,100,100, BluePen); //Line 5
 
               ui ->graphicsView->setRenderHint(QPainter::Antialiasing);
 
@@ -76,15 +76,32 @@ void Hangman::keyPressEvent(QKeyEvent *event)
         }
 
 
-
         if(flag==0){
             //ADD CODE TO DRAW SHAPES HERE !!!!!!!!
+           for (int i=0; i<=5; i++)
+            {
+               if(i > 4)
+           {
+                   line[i]= Hangman::disappear();
+               break;
+               }
+            else
+            {ellipse= Hangman::disappear();
+                   break;}
+           }
             ui->TextBox->setText("guessed incorrectly");
-        }else{
+        }
+        else{
             //ADD CODE TO DRAW CHARACTERS AND WORD HERE !!!!!!!!!!!!!
             ui->TextBox->setText("guessed correctly");
         }
+
     }
 
 }
+QGraphicsItem* Hangman::disappear()
+{
+    Hangman::hide();
+}
+
 

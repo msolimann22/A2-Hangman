@@ -8,17 +8,19 @@
 #include <QGraphicsLineItem>
 #include <QGraphicsEllipseItem>
 #include <QPainter>
+#include<QGraphicsItemAnimation>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Hangman; }
 QT_END_NAMESPACE
 
-class Hangman : public QMainWindow{
+class Hangman : public QMainWindow, QGraphicsItemAnimation{
     Q_OBJECT
 
 public:
     Hangman(QWidget *parent = nullptr);
     ~Hangman();
+   QGraphicsItem* disappear();
 
 private:
     Ui::Hangman *ui;
@@ -26,7 +28,7 @@ private:
     char guessedChar[30];
     int back; //points to the last char in the array
     QGraphicsScene* scene;
-       QGraphicsItem* line1, *line2, *line3, *line4, *line5;
+       QGraphicsItem* line[5];
        QGraphicsItem* ellipse;
 
 private slots:
