@@ -17,10 +17,20 @@
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>90</y>
+      <x>50</x>
+      <y>10</y>
       <width>521</width>
       <height>401</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="TextBox">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>50</y>
+      <width>150</width>
+      <height>40</height>
      </rect>
     </property>
    </widget>
@@ -31,7 +41,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

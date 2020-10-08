@@ -13,3 +13,9 @@ Hangman::~Hangman()
     delete ui;
 }
 
+void Hangman::keyPressEvent(QKeyEvent *event)
+{
+    ui->TextBox->setText(QString::number(event->key())
+    );
+}
+
