@@ -15,7 +15,6 @@ Hangman::~Hangman()
 
 void Hangman::keyPressEvent(QKeyEvent *event)
 {
-    ui->TextBox->setText(QString::number(event->key())
-    );
+    ui->TextBox->setText(QString::number(event->key()));
 }
 

@@ -1,16 +1,14 @@
 #ifndef HANGMAN_H
 #define HANGMAN_H
-
-
 #include <QMainWindow>
-#include <QKeyevent>
 #include <QObject>
+#include <QKeyEvent>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class Hangman; }
 QT_END_NAMESPACE
 
-class Hangman : public QMainWindow, QObject
-{
+class Hangman : public QMainWindow{
     Q_OBJECT
 
 public:
@@ -19,7 +17,9 @@ public:
 
 private:
     Ui::Hangman *ui;
+
 private slots:
     void keyPressEvent(QKeyEvent *event);
+
 };
 #endif // HANGMAN_H
