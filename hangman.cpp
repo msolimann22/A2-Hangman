@@ -13,20 +13,19 @@ Hangman::Hangman(QWidget *parent): QMainWindow(parent), ui(new Ui::Hangman)
 
           BluePen.setWidth(6);
 
-          scene ->setSceneRect(-200,-200,300,300);
-                       ellipse = scene -> addEllipse(-70,-190,100,100,BluePen,BlueBrush);
+          ellipse = scene -> addEllipse(-70,-190,100,100,BluePen,BlueBrush);
                         line[0]= scene->addLine(-150,-90,100,90, BluePen); //Line 1
                         line[1]= scene->addLine(-150,-90,20,80, BluePen); //Line 2
                         line[2]= scene->addLine(75,-80,20,80, BluePen); //Line 3
-                        line[3]= scene->addLine(0,0,100,100, BluePen); //Line 4
-                        line[4]= scene->addLine(0,0,100,100, BluePen); //Line 5
-
+                        line[3]= scene->addLine(-10,10,50,100, BluePen); //Line 4
+                        line[4]= scene->addLine(10,25,50,100, BluePen); //Line 5
                         ui ->graphicsView->setRenderHint(QPainter::Antialiasing);
-          line[0]->setRotation(53);
+                         line[0]->setRotation(53);
                        line[1]->setRotation(60);
                        line[2]->setRotation(300);
-                       line[3]->setRotation(45);
-                       line[4]->setRotation(45);
+                      // line[3]->setRotation(45);
+                       line[4]->setRotation(65);
+
 
 
 
